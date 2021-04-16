@@ -6,12 +6,14 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+<img class="logo" src= "images/DNDer_Icon.png" alt="logo" />
   <div class="header">
   	<h2>Register</h2>
   </div>
 	
   <form method="post" action="register.php">
-  	<?php include('errors.php'); ?>
+  	<?php //include('errors.php'); ?>
   	<div class="input-group">
   	  <label>Username</label>
   	  <input type="text" name="username" value="<?php echo $username; ?>">

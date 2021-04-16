@@ -18,7 +18,7 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
+<img class="logo" src= "images/DNDer_Icon.png" alt="logo" />
 <div class="header">
 	<h2>Home Page</h2>
 </div>
@@ -37,7 +37,8 @@
 
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
-    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p>
+    	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p><br/>
+		<p> <a href="records.php" style="color: blue;">Records</a></p><br/>
     	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
     <?php endif ?>
 </div>

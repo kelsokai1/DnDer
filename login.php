@@ -6,12 +6,13 @@
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
+<img class="logo" src= "images/DNDer_Icon.png" alt="logo" />
   <div class="header">
   	<h2>Login</h2>
   </div>
-	 
-  <form method="post" action="login.php">
-  	<?php include('errors.php'); ?>
+  
+   <form method="post" action="login.php">
   	<div class="input-group">
   		<label>Username</label>
   		<input type="text" name="username" >
