@@ -26,17 +26,19 @@ if(isset($_POST['search']))
 {
 $name = mysqli_real_escape_string($db,$_POST['name']);
 $game = mysqli_real_escape_string($db,$_POST['game']);
-if (isset($game) && $game=="DnD") $table = "DnD_Campaigns";
-elseif (isset($game) && $game=="PF") $table = "Pathfinder_Campaigns";
-elseif (isset($game) && $game=="Other") $table = "Other_Games";		
-$query = "SELECT * FROM $table WHERE name ='$name'";
+if (isset($game) && $game=="DnD") $table = "DnD_Preloaded_Campaigns";
+elseif (isset($game) && $game=="PF") $table = "Pathfinder_Preloaded_Campaigns";
+elseif (isset($game) && $game=="Other") $table = "Other_Preloaded_Campaigns";		
+$query = "SELECT * FROM $table WHERE name like '%$name%'";
 if ($result=mysqli_query($db,$query))
  {
-	 echo "<table boarder = '1'>
+	 echo "<table border = '1'>
 		   <tr>
 		   <th>Name</th>
-		   <th>Genre</th>
 		   <th>Publisher</th>
+		   <th>Edition</th>
+		   <th>Setting</th>
+		   <th>Recommended Experience</th>
 		   <th>Recommended Level</th>
 		   </tr>";
   while ($row=mysqli_fetch_row($result))
@@ -46,6 +48,8 @@ echo "<td>".$row[1]."</td>";
 echo "<td>".$row[2]."</td>";
 echo "<td>".$row[3]."</td>";
 echo "<td>".$row[4]."</td>";
+echo "<td>".$row[5]."</td>";
+echo "<td>".$row[6]."</td>";
 echo "</tr>";
 }
 echo "</table>";

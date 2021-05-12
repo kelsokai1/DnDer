@@ -18,8 +18,8 @@ table, th, td {
 }
 button {
 	border: none;
-	background-color: #A36E6E;
-	color: white;
+	background-color: #ffc780;
+	color: black;
 	padding: 15px 32px;
 	text-align: center;
 	text-decoration: none;
@@ -28,25 +28,38 @@ button {
 	cursor: pointer;
 	margin-left: auto; 
 }
+.navigation {
+	border: solid;
+	background-color: #ffc780;
+	border-color: black;
+	padding: 15px 32px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	margin: 1px;
+	border-radius: 5px;
+	width: 50%;
+}
 body {
   font-size: 120%;
-  background: #F8F8FF;
+  background-color: #ffc780;
+  margin: 0px;
 }
 .title {
 	margin-right: auto;
 	font-size: 50px;
 	left: 35%;
 	position: relative;
-
-	
 }
 .header {
   width: 30%;
   margin: 50px auto 0px;
   color: white;
-  background: #A5300C;
+  background: Black;
   text-align: center;
-  border: 1px solid #B0C4DE;
+  border: 1px solid Grey;
   border-bottom: none;
   border-radius: 10px 10px 0px 0px;
   padding: 20px;
@@ -55,6 +68,14 @@ form, .content{
   width: 60%;
   margin: auto;
   padding: 20px;
+  border: 1px solid #B0C4DE;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+.profile-view{
+  width: 80%;
+  margin: auto;
+  padding: 10px;
   border: 1px solid #B0C4DE;
   background: white;
   border-radius: 0px 0px 10px 10px;
@@ -75,21 +96,28 @@ form, .content{
   border-radius: 5px;
   border: 1px solid gray;
 }
+.input-group select {
+  height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
 .btn {
   padding: 10px;
   font-size: 15px;
-  color: white;
-  background: #A5300C;
+  color: black;
+  background: #ffc780;
   border: none;
   border-radius: 5px;
 }
 .btn:hover {
   padding: 10px;
   font-size: 15px;
-  color: white;
-  background: #db481a;
+  background: #ffbc67;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .error {
   width: 92%; 
@@ -107,5 +135,7 @@ form, .content{
   border: 1px solid #3c763d;
   margin-bottom: 20px;
 }
+a:link, a:visited { color:black; text-decoration: none; }
+a:hover {text-decoration: underline;}
 
 

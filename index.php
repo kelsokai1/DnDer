@@ -38,8 +38,9 @@
     <!-- logged in user information -->
     <?php  if (isset($_SESSION['username'])) : ?>
     	<p>Welcome <strong><?php echo $_SESSION['username']; ?></strong></p><br/>
-		<p> <a href="records.php" style="color: blue;">Records</a></p><br/>
-    	<p> <a href="index.php?logout='1'" style="color: red;">logout</a> </p>
+		<a href="records.php" class="navigation">Records</a><br/>
+		<a href="create_campaign.php" class="navigation">Create New Campaign</a><br/>
+    	<a href="index.php?logout='1'" class="navigation">Logout</a> 
     <?php endif ?>
 </div>
 		

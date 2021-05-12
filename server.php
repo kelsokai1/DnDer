@@ -50,6 +50,7 @@ if (isset($_POST['reg_user'])) {
   			  VALUES('$username', '$email', '$password')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
+	$_SESSION['ID'] = $id;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: index.php');
   }
@@ -74,6 +75,9 @@ if (isset($_POST['login_user'])) {
   	$query = "SELECT * FROM Profile WHERE username = '$username' AND password = '$password' LIMIT 1";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
+	  $row = mysqli_fetch_array($results);
+	  $id = $row['profileID'];
+	  $_SESSION['ID'] = $id;
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: index.php');
